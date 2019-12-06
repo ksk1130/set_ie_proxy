@@ -5,14 +5,8 @@
     main: function () {
         var shell = WScript.CreateObject("WScript.Shell");
         
-        shell.Run("iexplore.exe",1,true);
+        shell.Run("control inetcpl.cpl",1,true);
         WScript.Sleep(this.WAIT_LONG);
-        
-        shell.SendKeys("%t");
-        WScript.Sleep(this.WAIT_SHORT);
-        
-        shell.SendKeys("o");
-        WScript.Sleep(this.WAIT_SHORT);
         
         shell.SendKeys("^{TAB}^{TAB}^{TAB}^{TAB}");
         WScript.Sleep(this.WAIT_SHORT);
